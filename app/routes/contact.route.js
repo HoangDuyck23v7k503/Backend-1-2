@@ -1,5 +1,5 @@
 const express = require("express");
-const contacts = require ("../controller/contact.contreller");
+const contacts = require ("../controllers/contact.controller");
 const route = require("color-convert/route");
 
 const router = express.Router();
