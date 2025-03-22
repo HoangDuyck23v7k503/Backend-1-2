@@ -19,6 +19,7 @@ exports.create =async(req, res, next) => {
         );
     }
 };
+
 exports.findAll =async (req, res, next) => {
     let document = [];
     try{
@@ -36,6 +37,7 @@ exports.findAll =async (req, res, next) => {
     }
     return res.send(document);
 };
+
 exports.findOne = async (req, res, next) => {
     try{
         const ContactService = new ContactService(MongoDB.client);
@@ -54,6 +56,7 @@ exports.findOne = async (req, res, next) => {
     }
 
 };
+
 exports.update =async (req, res, next) => {
     if(Object.keys (req.body).length == 0){
         return next(new ApiError(400, "Data to update can not be empty"));       
@@ -71,6 +74,7 @@ exports.update =async (req, res, next) => {
         );
     }
 };
+
 exports.delete = async (req, res, next) => {
     try {
         const ContactService = new ContactService(MongoDB.client);
@@ -84,6 +88,7 @@ exports.delete = async (req, res, next) => {
 
     }
 };
+
 exports.deleteAll= async(req, res, next) => {
     try {
         const ContactService = new ContactService(MongoDB.client);
@@ -97,6 +102,7 @@ exports.deleteAll= async(req, res, next) => {
         );
     }
 };
+
 exports.findAllFavorite =async (req, res, next) => {
     try {
         const ContactService = new ContactService(MongoDB.client);
